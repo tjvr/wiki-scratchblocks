@@ -52,11 +52,11 @@ function sbSetup () {
 
 $wgResourceModules['ext.scratchBlocks'] = array(
     'scripts' => array(
-        'scratchblocks2.js',
+        'scratchblocks2/scratchblocks2.js',
         'run_scratchblocks2.js',
     ),
 
-    'styles' => 'scratchblocks2.css',
+    'styles' => 'scratchblocks2/scratchblocks2.css',
 
     // jQuery is loaded anyway
     'dependencies' => array(),
