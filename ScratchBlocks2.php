@@ -63,6 +63,6 @@ $wgResourceModules['ext.scratchBlocks'] = array(
 
     // Where the files are
     'localBasePath' => __DIR__,
-    'remoteExtPath' => 'ScratchBlocks2'
+    'remoteExtPath' => 'mw-ScratchBlocks2'
 );
 

@@ -10,7 +10,7 @@ Installation
 
 Just drop this folder into MediaWiki's "extensions/" folder, and add
 
-    require_once( "$IP/extensions/ScratchBlocks2/ScratchBlocks2.php" );
+    require_once( "$IP/extensions/mw-ScratchBlocks2/ScratchBlocks2.php" );
 
 to your "LocalSettings.php".
 
