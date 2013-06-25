@@ -1,6 +1,6 @@
 A simple MediaWiki extension for rendering Scratch blocks.
 
-Transforms <scratchblocks> tags inside wiki articles into <pre class="blocks">
+Transforms `<scratchblocks>` tags inside wiki articles into `<pre class="blocks">`
 in the HTML, which are then rendered to scratch blocks using CSS and JS
 included in the page.
 
