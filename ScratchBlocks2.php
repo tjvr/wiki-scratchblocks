@@ -22,21 +22,30 @@ if (!defined('MEDIAWIKI')) {
 
 $wgExtensionFunctions[] = 'sbSetup';
 $wgHooks['ParserFirstCallInit'][] = 'sbParserInit';
- 
+
 
 // Hook callback function into parser
 
 function sbParserInit (Parser $parser) {
     // Register <scratchblocks> tag
     $parser->setHook('scratchblocks', 'sbRenderTag');
+    $parser->setHook('sb', 'sbRenderInlineTag');
     return true;
 }
- 
 
-// Called to ouput HTML for <scratchsig> tag
+
+// Output HTML for <scratchblocks> tag
 
 function sbRenderTag ($input, array $args, Parser $parser, PPFrame $frame) {
     return '<pre class="blocks">' . htmlspecialchars($input) . '</pre>';
+}
+
+
+// Output HTML for <scratchblocks> tag
+
+function sbRenderInlineTag ($input, array $args, Parser $parser,
+                            PPFrame $frame) {
+    return '<code class="blocks">' . htmlspecialchars($input) . '</code>';
 }
 
 
