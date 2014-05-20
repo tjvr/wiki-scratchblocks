@@ -15,7 +15,7 @@ Just drop this folder into MediaWiki's "extensions/" folder, and add
 to your "LocalSettings.php".
 
 
-Caveats
+Warning
 =======
 
 This repository uses Git submodules. If you `git clone`, make sure to include the `--recursive` option.
