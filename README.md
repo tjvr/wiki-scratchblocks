@@ -16,6 +16,6 @@ to your "LocalSettings.php".
 
 
 Warning
-=======
+-------
 
 This repository uses Git submodules. If you `git clone`, make sure to include the `--recursive` option.
