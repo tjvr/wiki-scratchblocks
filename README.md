@@ -15,7 +15,7 @@ This repository uses Git submodules. If you `git clone`, make sure to include th
 
 Just drop this folder into MediaWiki's "extensions/" folder, and add
 
-    require_once( "$IP/extensions/ScratchBlocks/ScratchBlocks2.php" );
+    require_once( "$IP/extensions/ScratchBlocks/ScratchBlocks.php" );
 
 to your "LocalSettings.php".
 

@@ -7,8 +7,8 @@
  * MIT Licensed
  * http://opensource.org/licenses/MIT
  *
- * Includes scratchblocks2
- * http://github.com/blob8108/scratchblocks2
+ * Includes scratchblocks v3
+ * https://github.com/tjvr/scratchblocks
  *
  */
 
@@ -22,29 +22,28 @@ if (!defined('MEDIAWIKI')) {
 
 $wgExtensionFunctions[] = 'sbSetup';
 $wgHooks['ParserFirstCallInit'][] = 'sbParserInit';
-
+ 
 
 // Hook callback function into parser
 
 function sbParserInit (Parser $parser) {
-    // Register <scratchblocks> tag
+    // Register <scratchblocks> and <sb> tag
     $parser->setHook('scratchblocks', 'sbRenderTag');
-    $parser->setHook('sb', 'sbRenderInlineTag');
+	$parser->setHook('sb', 'sbRenderInlineTag');
     return true;
 }
+ 
 
-
-// Output HTML for <scratchblocks> tag
+// Ouput HTML for <scratchblocks> tag
 
 function sbRenderTag ($input, array $args, Parser $parser, PPFrame $frame) {
     return '<pre class="blocks">' . htmlspecialchars($input) . '</pre>';
 }
 
+// Output HTML for inline <sb> tag
 
-// Output HTML for <scratchblocks> tag
-
-function sbRenderInlineTag ($input, array $args, Parser $parser,
-                            PPFrame $frame) {
+function sbRenderInlineTag ($input, array $args, Parser $parser, PPFrame $frame) {
+	//throw new Exception("what");
     return '<code class="blocks">' . htmlspecialchars($input) . '</code>';
 }
 
@@ -61,17 +60,17 @@ function sbSetup () {
 
 $wgResourceModules['ext.scratchBlocks'] = array(
     'scripts' => array(
-        'scratchblocks2/build/scratchblocks2.js',
-        'run_scratchblocks2.js',
+        'ScratchBlocks/src/scratchblocks.js',
+		'scratchblocks/src/translations.js',
+        'run_scratchblocks.js',
     ),
 
-    'styles' => 'scratchblocks2/build/scratchblocks2.css',
+    'styles' => '/inline.css',
 
     // jQuery is loaded anyway
     'dependencies' => array(),
 
     // Where the files are
     'localBasePath' => __DIR__,
-    'remoteExtPath' => 'mw-ScratchBlocks2'
+    'remoteExtPath' => 'ScratchBlocks'
 );
-
