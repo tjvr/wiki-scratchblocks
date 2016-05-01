@@ -74,3 +74,12 @@ $wgResourceModules['ext.scratchBlocks'] = array(
     'localBasePath' => __DIR__,
     'remoteExtPath' => 'ScratchBlocks'
 );
+
+$wgExtensionCredits['parserhook'][] = array(
+    'name' => "Scratchblocks",           // Name of extension - string
+    'description' => "This plugin takes text-based Scratch code and renders it in a graphical format.",    // Description of what the extension does - string. Omit in favour of descriptionmsg.
+    'version' => 3.1,         // Version number of extension - number or string
+    'author' => ["ErnieParke","blob8108"],         // The extension author's name - string or array for multiple
+    'url' => "https://github.com/tjvr/wiki-scratchblocks",            // URL of extension (usually instructions) - string
+    'license-name' => "https://github.com/tjvr/wiki-scratchblocks/blob/master/LICENSE",   // Short name of the license, links LICENSE or COPYING file if existing - string, added in 1.23.0
+);
