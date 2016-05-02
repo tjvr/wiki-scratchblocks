@@ -18,7 +18,7 @@
 	"ResourceModules": {
 		"ext.scratchBlocks": {
 			"scripts": [
-				"ScratchBlocks/src/scratchblocks.js",
+				"scratchblocks/src/scratchblocks.js",
 				"scratchblocks/src/translations.js",
 				"run_scratchblocks.js"
 			],
