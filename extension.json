@@ -1,0 +1,39 @@
+{
+	"name": "Scratchblocks",
+	"version": 3.1,
+	"author": [
+		"ErnieParke",
+		"blob8108"
+	],
+	"url": "https://github.com/tjvr/wiki-scratchblocks",
+	"description": "This plugin takes text-based Scratch code and renders it in a graphical format.",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"AutoloadClasses": {
+		"ScratchblockHook": "ScratchblockHooks.php"
+	},
+	"ExtensionFunctions": [
+		"ScratchblockHook::sbSetup"
+	],
+	"ResourceModules": {
+		"ext.scratchBlocks": {
+			"scripts": [
+				"scratchblocks/src/scratchblocks.js",
+				"scratchblocks/src/translations.js",
+				"run_scratchblocks.js"
+			],
+			"styles": "/inline.css",
+			"dependencies": []
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "ScratchBlocks"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"ScratchblockHook::sbParserInit"
+		]
+	},
+	"manifest_version": 1
+}
