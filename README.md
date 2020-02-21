@@ -20,11 +20,11 @@ This repository uses Git submodules. If you `git clone`, make sure to include th
 
 Just drop this folder into MediaWiki's "extensions/" folder, and add
 
-    require_once( "$IP/extensions/ScratchBlocks/ScratchBlocks.php" );
-
-to your "LocalSettings.php". If running Mediawiki 1.25 or greater, you can use
-
     wfLoadExtension( "ScratchBlocks" );
+
+to your "LocalSettings.php". If running Mediawiki 1.24 or lower, you can use
+
+    require_once( "$IP/extensions/ScratchBlocks/ScratchBlocks.php" );
 
 instead of the require statement.
 
